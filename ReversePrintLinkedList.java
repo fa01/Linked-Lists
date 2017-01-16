@@ -1,5 +1,5 @@
 /*
- Insert Node at the beginning of a linked list
+ Insert Node at the end of a linked list
  head pointer input could be NULL as well for empty list
  Node is defined as
  class Node {
@@ -10,20 +10,16 @@
 // This is a "method-only" submission.
 // You only need to complete this method.
 
-Node Insert(Node head,int x) {
+void ReversePrint(Node head) {
+// This is a "method-only" submission.
+// You only need to complete this method.
+
 if (head == null){
-head = new Node();
-head.data = x;
+
 }
 else{
-Node n = new Node();
-n.data = x;
-
-Node temp = head;
-head = n;
-
-head.next = temp;
+ReversePrint(head.next);
+System.out.println(head.data);
 }
-return head;
 
 }
